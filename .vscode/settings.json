@@ -1,3 +1,26 @@
 {
-  "python.formatting.provider": "black"
+  // Point VS Code at your venv’s interpreter
+  "python.defaultInterpreterPath": "venv/bin/python",
+
+  // On Windows, use:
+  // "python.defaultInterpreterPath": ".venv\\Scripts\\python.exe",
+
+  // Ensure Jupyter notebooks use the same interpreter
+  "jupyter.interpreter.hashes": [],
+  "jupyter.interpreter.useDefaultInterpreter": true,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+
+  // Optional: format on save with Black
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+
+  // Optional: lint with Ruff if you’re using it
+  "ruff.enable": true,
+  "ruff.lineLength": 88,
+
+  // Optional: exclude notebooks’ output from search/commits
+  "files.exclude": {
+    "**/venv": true,
+    "**/__pycache__": true
+  }
 }

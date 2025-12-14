@@ -1,8 +1,10 @@
 config = {
     "openmeteo_forecasts": {
-        "partition_folder_name": "forecasts",
+        "dataset_name": "forecasts",
         "new_data_file_prefixes": ["multi_model_forecast - "],
+        "new_data_file_suffixes": None,
         "start_date_field": "date",
+        "start_date_format": "YYYY-MM-DD",
         "record_index_fields": [
             "datetime",
             "forecast_temperature",
@@ -33,7 +35,7 @@ config = {
         "partition_columns": ["city", "year_month"],
     },
     "accuweather_forecasts": {
-        "partition_folder_name": "accuweather",
+        "dataset_name": "accuweather",
         "new_data_file_prefixes": [
             "accuweather_12h_austin_",
             "accuweather_12h_chicago_",
@@ -43,16 +45,37 @@ config = {
             "accuweather_12h_miami_",
             "accuweather_12h_philadelphia_",
         ],
+        "new_data_file_suffixes": None,
         "start_date_field": "date",
+        "start_date_format": "YYYYMMDD",
     },
     "nws_observations": {
-        "partition_folder_name": "nws_observations",
+        "dataset_name": "nws_observations",
         "new_data_file_prefixes": ...,
+        "new_data_file_suffixes": None,
         "start_date_field": "date",
+        "start_date_format": None,
+        "record_index_fields": None,
+        "output_columns": None,
+        "partition_columns": None,
     },
     "candlesticks": {
-        "partition_folder_name": "candlesticks",
-        "new_data_file_prefixes": ...,
+        "dataset_name": "candlesticks",
+        "new_data_file_prefixes": [
+            "KXHIGHAUS-",
+            "KXHIGHCHI-",
+            "KXHIGHDEN-",
+            "KXHIGHHOU-",
+            "KXHIGHLAX-",
+            "KXHIGHMIA-",
+            "KXHIGHNY-",
+            "KXHIGHPHIL-",
+        ],
+        "new_data_file_suffixes": ["_candlesticks"],
         "start_date_field": "date",
+        "start_date_format": "YYMMMDD",
+        "record_index_fields": None,
+        "output_columns": None,
+        "partition_columns": None,
     },
 }

@@ -1,4 +1,4 @@
-from galton.data.collection.accuweather import stage_accuweather_12h_all_cities
+from galton.data_collection.accuweather import stage_accuweather_12h_all_cities
 
 # from galton.data.city_reference import cities
 

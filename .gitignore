@@ -51,9 +51,6 @@ venv.bak/
 # Ignore everything in data/local_data
 data/
 
-# But do not ignore src/galton/data/*
-!src/galton/data/*
-
 .cache.sqlite
 .vscode/
 .DS_Store
